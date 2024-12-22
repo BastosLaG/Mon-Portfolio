@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+nav {
+    margin-top: 1rem;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+section strong {
+    cursor: pointer;
+    font-size: 1.5em;
+    margin: 10px 0;
+    padding: 10px;
+}
+code {
+    background: #f4f4f9;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+}
+section .content {
+    display: none;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+section .content.active {
+    display: block;
+}
+
+.about, .projects, .contact {
+    margin-bottom: 2rem;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.3rem 0;
+    bottom: 0;
+    width: 100%;
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+}
+.about strong {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+}
+.contact h2 {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+}
+.projects h3 {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+}
+.projects h2 {
+    color: #333;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.projects ul {
+    list-style: none;
+    padding: 0.5;
+}
+.projects ul li ul li {
+    margin-bottom: 0.1rem;
+}
+.projects li {
+    margin-bottom: 2rem;
+}
+.projects a {
+    color: #007bff;
+    text-decoration: none;
+}
+.projects a:hover {
+    text-decoration: underline;
+}
+video, img {
+    display: block;
+    margin-top: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+.video-container {
+    display: flex; 
+    justify-content: center -2rem; 
+    align-items: center; 
+    margin: 2rem ; 
+}
+
+video:hover, img:hover {
+    border-color: #007bff;
+}
+.projects img {
+    max-width: 50%;
+    height: auto; 
+    border-radius: 8px; 
+    margin: 0.5rem 0; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projects img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+.projects strong {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+}
+.image-gallery {
+    display: flex;
+    gap: 1rem; 
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+.image-gallery img {
+    width: calc(50% - 1rem);
+    max-width: 1000px; 
+    cursor: pointer;
+}
+
+.social-media {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    display: flex;                /* Utilise flexbox pour centrer l'icône */
+    justify-content: center;       /* Centre l'icône horizontalement */
+    align-items: center;           /* Centre l'icône verticalement */
+    text-decoration: none;
+    font-size: 20px;               /* Ajuste la taille des icônes */
+    color: white;
+    width: 50px;                   /* Taille du cercle */
+    height: 50px;                  /* Taille du cercle */
+    border-radius: 50%;            /* Crée un cercle parfait */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu {
+    width: 300px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.menu-item {
+    border-bottom: 1px solid #ccc;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-title {
+    margin: 0;
+    padding: 15px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu-title:hover {
+    background-color: #e2e2e2;
+}
+
+.menu-content {
+    display: none;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.instagram {
+    background-color: #e4405f;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.github {
+    background-color: #333;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);             /* Agrandit l'icône au survol */
+    background-color: rgba(0, 0, 0, 0.1); /* Change la couleur de fond au survol */
+}
+
+.social-icon i {
+    font-size: 25px; /* Ajuste la taille de l'icône à l'intérieur du cercle */
+}
+
+/* Conteneur pour l'image en plein écran */
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image en plein écran */
+#fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+/* Bouton de fermeture */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
