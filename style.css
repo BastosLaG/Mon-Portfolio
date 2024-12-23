@@ -43,11 +43,16 @@ section .content {
     padding: 1rem;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
 }
 
 section .content.active {
     display: block;
+    max-height: 2000px;
 }
+
 
 .about, .projects, .contact {
     margin-bottom: 2rem;
@@ -108,7 +113,7 @@ video, img {
 }
 .video-container {
     display: flex; 
-    justify-content: center -2rem; 
+    justify-content: center; 
     align-items: center; 
     margin: 2rem ; 
 }
@@ -117,12 +122,19 @@ video:hover, img:hover {
     border-color: #007bff;
 }
 .projects img {
-    max-width: 50%;
-    height: auto; 
-    border-radius: 8px; 
-    margin: 0.5rem 0; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    width: 100%; 
+    height: auto;
+    max-width: 500px; 
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+}
+.projects video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
 }
 
 .projects img:hover {
@@ -151,16 +163,25 @@ video:hover, img:hover {
 }
 
 .social-icon {
-    display: flex;                /* Utilise flexbox pour centrer l'icône */
-    justify-content: center;       /* Centre l'icône horizontalement */
-    align-items: center;           /* Centre l'icône verticalement */
+    display: flex;                
+    justify-content: center;      
+    align-items: center;          
     text-decoration: none;
-    font-size: 20px;               /* Ajuste la taille des icônes */
+    font-size: 20px;              
     color: white;
-    width: 50px;                   /* Taille du cercle */
-    height: 50px;                  /* Taille du cercle */
-    border-radius: 50%;            /* Crée un cercle parfait */
+    width: 50px;                  
+    height: 50px;                 
+    border-radius: 50%;       
     transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.social-icon i {
+    font-size: 25px;
 }
 
 .menu {
@@ -168,6 +189,12 @@ video:hover, img:hover {
     margin: 50px auto;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        width: 90%; 
+    }
 }
 
 .menu-item {
@@ -212,16 +239,6 @@ video:hover, img:hover {
     background-color: #333;
 }
 
-.social-icon:hover {
-    transform: scale(1.1);             /* Agrandit l'icône au survol */
-    background-color: rgba(0, 0, 0, 0.1); /* Change la couleur de fond au survol */
-}
-
-.social-icon i {
-    font-size: 25px; /* Ajuste la taille de l'icône à l'intérieur du cercle */
-}
-
-/* Conteneur pour l'image en plein écran */
 .fullscreen {
     position: fixed;
     top: 0;
@@ -234,14 +251,12 @@ video:hover, img:hover {
     align-items: center;
 }
 
-/* Image en plein écran */
 #fullscreen-image {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
 }
 
-/* Bouton de fermeture */
 .close {
     position: absolute;
     top: 10px;
