@@ -8,244 +8,63 @@
     <meta name="author" content="Bastien Capiaux">
     <title>Portfolio - Bastien Capiaux</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Css/style.css">
 </head>
-<body>
-    <header>
-        <h1>Bienvenue dans mon portfolio</h1>
-        <nav>
-            <a href="#about">À propos</a>
-            <a href="#projects">Projets</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <section id="about" class="about">
-        <h2>À propos</h2>
-        <p>Bonjour, je me présente, <b>Bastien Capiaux</b>, né le 26 mars 2003 à Le Blanc-Mesnil. Passionné par les jeux vidéo et les nouvelles technologies, j'ai orienté mon parcours autour de ces domaines.</p>
-        <ul>
-            <li><b>Diplômes</b> : Brevet et baccalauréat (Numérique et sciences informatiques, Mathématiques, Physique-Chimie) avec mention .</li>
-            <li><b>Licence</b> : Informatique, mineure vidéoludisme, Université Paris 8.</li>
-            <li><b>Master</b> : AMINJ à Albi, spécialisé en gestion de projets et création de jeux sérieux.</li>
-        </ul>
-        <p>Mon objectif est de développer mes compétences en gestion agile et en travail d'équipe dans le cadre de projets informatiques ambitieux, notamment dans le domaine du jeu vidéo.</p>
-        <p>Pour moi, le jeu vidéo est bien plus qu'un simple divertissement ; c'est un outil puissant pour transmettre des émotions, des histoires et des valeurs. Le jeu a longtemps été une grande source d'inspiration, qu'il s'agisse de petits jeux indépendants ou de grands titres "AAA". C'est pourquoi je souhaite devenir développeur de jeux vidéo et/ou chef d'équipe dans ce domaine.</p>
-    </section>
-    
-    <section id="projects" class="projects">
-        <h2>Projets</h2>
-        <p>Voici une sélection de projets réalisés au cours de mes études et expériences professionnelles. </p>
-        <h3>Jeux et Jeux Serieux</h3>
-        <p>Voici une partie des jeux que j'ai pu réaliser au fil de mon parcours :</p>
-        <ul>
-            <li>
-                <strong> Jeu Pygame </strong>
-                <div class="content">
-                    <p> Durant mes années de lycée, je me suis initié à la programmation orientée objet en utilisant Python, et sa bibliothèque Pygame pour créer des jeux vidéo. </p> 
-                    <p> Ainsi, je me suis lancé dans la création d’un side-scroller avec une boucle de gameplay simple : lancer le jeu, atteindre le niveau 10 en survivant et en éliminant les ennemis, dont deux boss, avant de recommencer.</p> 
-                    <p>Avec du recul je conçois que l'API Pygame n'est pas la meilleur mais je souhaite quand meme vous montrer mes débuts. Ce projet m'a appris beaucoup de choses telles que :</p>
-                    <ul>
-                        <li> Utilisation de la programmation orientée objet avec l'instanciation des ennemis, des projectiles et la gestion des scripts pour la gestion du jeu. </li>
-                        <li> Utilisation et animation de sprites 2D ainsi que l'implémentation de fonctions de parallaxe pour les étoiles en arrière plan</li>
-                        <li>La mise en place d'un système d'événements pour la musique au lancement du jeu puis dans les menus</li>
-                    </ul>
-                    <div class="image-gallery">
-                        <img src="Assets/Projets/Jeux/Pygame/menu.png" alt="Pygame" onclick="openFullscreen(this)">
-                        <img src="Assets/Projets/Jeux/Pygame/game1.png" alt="Pygame" onclick="openFullscreen(this)">
-                        <img src="Assets/Projets/Jeux/Pygame/game2.png" alt="Pygame" onclick="openFullscreen(this)">
-                    </div>
-                    Il est téléchargeable sur <a href="https://capiaux-bastien.itch.io/pioupiougame">Itch.io</a>.
-                </div>
-            </li>
-            <li>
-                <strong> Jeu Godot </strong>
-                <div class="content">
-                    <p>J'ai redéveloppé mon jeu Pygame sous Godot Engine, ce qui m'a permis de concrétiser mon expérience et de pouvoir me rendre compte de l'importance du choix du moteur de jeu que l'on utilise. Petite spécificité : je me suis imposé la contrainte de ne pas utiliser les nœuds de Godot et de tout programmer uniquement en GDscript. Cela m'a permis d'améliorer mes appels de fonction et l'instanciation de mes classes.</p>
-                    <p>Mon jeu est devenu plus fluide, plus beau avec l'ajout de particules et avec un code beaucoup plus simple.</p>
-                </div>
-            </li>
-            <li>
-                <strong>Jeu Perspective</strong>
-                <div class="content">
-                    <p>Le jeu de la perspective est assez simple à comprendre. Nous avons une grille de grandeur N, cette grille est vide et doit être remplie de 1 à N, comme au Sudoku, on ne peut pas avoir deux fois le même chiffre sur la même colonne et la même ligne. Pour plus de précision, imaginez une ville où N représente la tour la plus haute, et un la plus petite. Tout autour de la grille, il y a des chiffres qui indiquent le nombre de bâtiments qu'ils peuvent voir depuis leur position. Exemple, si un des numéros nous donne un cela veut dire qu'il voit forcément la tour la plus haute et seulement elle.</p>
-                    <p> J'ai pu coder la création de la grille en C avec N éléments, ce qui était un très bon exercice pour s'exercer sur des matrices de profondeur 1.</p>
-                    <div class="image-gallery">
-                        <img src="Assets/Projets/Jeux/Perspective/fin.png" alt="Perspective" onclick="openFullscreen(this)">
-                        <img src="Assets/Projets/Jeux/Perspective/grille 8 par 8.png" alt="Perspective" onclick="openFullscreen(this)">
-                    </div>
-                </div>
-            </li>
-            <li>
-                <strong>Jeu Ecosysteme</strong>
-                <div class="content">
-                    <p>L’univers considéré est composé de moutons, de loups, d’herbes et de sels minéraux. Les loups se nourrissent des moutons pour survivre, tandis que les moutons consomment l’herbes. Lorsqu’un loup ou un mouton meurt de faim ou de vieillesse, il dépose sur la case où il est mort des sels minéraux, qui serviront d’engrais à l’herbe. On considère que les loups ne se mangent pas entre eux et qu’ils ne peuvent mourir que de vieillesse. L’univers est dit "mort" lorsqu’il n’y a plus ni loups ni moutons vivants. Une des améliorations du projet consiste à éviter cette situation en équilibrant soigneusement le nombre initial de loups, de moutons, d’herbes et de sels minéraux.</p>
-                        <div class="image-gallery">
-                            <img src="Assets/Projets/Jeux/Ecosysteme/grilledep.png" alt="Ecosystème" onclick="openFullscreen(this)">
-                            <img src="Assets/Projets/Jeux/Ecosysteme/grillefin.png" alt="Ecosystème" onclick="openFullscreen(this)">
-                            <img src="Assets/Projets/Jeux/Ecosysteme/wolfround.png" alt="Ecosystème" onclick="openFullscreen(this)">
-                            <img src="Assets/Projets/Jeux/Ecosysteme/sheepround.png" alt="Ecosystème" onclick="openFullscreen(this)">
-                        </div>
-                    <p>Lien du projet sur <a href="https://github.com/BastosLaG/projetEcoCPP">github</a></p>
-                </div>
-            </li>
-            <li>
-                <strong>Jeu Javascript - UnivFighter</strong>
-                <div class="content">
-                    <p>UnivFighter est un jeu de combat inspiré de Street Fighter qui est un petit jeu développé en deux semaines entre amis qui devait mettre en scène nos propres personnages en scène au sein de notre université, l'Université Paris 8, nous avons trois niveaux jouables : 
-                        <ul>
-                            <li>L'entrée de l'Université Paris 8</li>
-                            <li>Le Bocal, un lieu culte de la licence informatiques c'est la ou les gens se réunisse entre les cours.</li>
-                            <li>Le quai du metro 13 présent devant l'université</li>
-                        </ul>
-                    Un système de combat IA contre IA a été développé pour une présentation en classe avant la fin de notre cours, en plus d’un mode combat joueur contre joueur.
-                    </p>
-                    <div class="image-gallery">
-                        <img src="Assets/Projets/Jeux/UnivFighter/capture1.png" alt="Capture UnivFighter" onclick="openFullscreen(this)">
-                        <img src="Assets/Projets/Jeux/UnivFighter/capture2.png" alt="Capture UnivFighter" onclick="openFullscreen(this)">
-                        <img src="Assets/Projets/Jeux/UnivFighter/capture3.png" alt="Capture UnivFighter" onclick="openFullscreen(this)">
-                        <img src="Assets/Projets/Jeux/UnivFighter/capture4.png" alt="Capture UnivFighter" onclick="openFullscreen(this)">
-                    </div>
-                    <p>Lien du projet sur <a href="https://github.com/BastosLaG/projetStreetFighter">github</a></p>
-                </div>
-            </li>
-            <li>
-                <strong>Jeu Serieux - Odontologie</strong>
-                <div class="content">
-                    <p>Le projet ODON est un projet tutorer lors de mon M1 à l'Institut National Universitaire Champollion  qui a pour but d'être utiliser par les apprentits dentiste de L'INSA de Toulouse afin de leur apprendre et pratiquer la pose d'une digue dentaire. Cela leur permet d'isoler une ou plusieur dent du reste de la bouche afin de proceder a des operations sur ces dites dents.</p>
-                    <p>Ce projet est mon premier jeu en réaliter virtuelle ce qui m'a appris de nombreuse chose tel que :</p>
-                    <ul>
-                        <li>Le rigging de notre personnage en réaliter virtuelle selon les mouvement de notre joueur.</li>
-                        <li>Les softs bodies qui nous permette ici d'animer notre digue.</li>
-                        <li>La présence de mirroire dans la scene est aussi quelque chose de nouveau pour moi.</li>
-                    </ul>
-                    <div class="video-container">
-                        <video controls width="600">
-                            <source src="chemin-vers-video/demo2023.mp4" type="video/mp4">
-                            Votre navigateur ne prend pas en charge la vidéo.
-                        </video>
-                    </div>
-                    <p>Ce projet est encore en cours de production, et des stages sont prévus pour continuer à travailler dessus en dehors des semaines de projet tutoré. Nous n'avons disposé que de 4 semaines pour réaliser le travail demandé.</p>
-                </div>
-            </li>
+<div id="header-placeholder"></div>
+
+<script>
+fetch("Pages/header.html")
+    .then(response => response.text())
+    .then(data => {
+    document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
+
+<body>    
+
+    <main>
+        <section class="profile">
+            <h2>Profil</h2>
+            <p>Je suis Bastien Capiaux, un développeur passionné de jeux vidéo et de technologies. Avec une solide expérience en Python, Godot, et C, je crée des projets innovants et engageants. Mon objectif est de continuer à apprendre et à évoluer dans le domaine du développement logiciel.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Compétences</h2>
+            <ul>
+                <li>Langages de programmation : Python, C, JavaScript</li>
+                <li>Moteurs de jeu : Godot, Unity</li>
+                <li>Outils : Git, Visual Studio Code</li>
+                <li>Compétences en résolution de problèmes et en travail d'équipe</li>
             </ul>
-        <!-- Catégorie : GL4D -->
-        <h3>Démo GL4D</h3>
-        <p> <a href="https://gl4d.api8.fr/FR/">GL4Dummies</a> est une API qui vise à aider les développeurs C à produire facilement des applications multiplateformes OpenGL 3.3+. Développée par <b>Farès Belhadj</b>, mon ancien professeur de licence d'infographie, elle m'a permis d'apprendre les bases du rendu graphique. </p>
-        <p> Laissez-moi vous présenter mes rendus pour le concours <a href="https://www.api8.fr/">API8</a> pour la track 64ko, organisé encore une fois par M. Belhadj.</p>
-        <ul>
-            <li>
-                <strong>Démo GL4D pour l'édition 2023 d'API8</strong>
-                <div class="content">
-                    <p>La démonstration met en scène une course déjantée entre une voiture et une baignoire, sur fond de musique d'Initial D jouée au kazoo. Ce que j'ai appris :</p>
-                    <ul>
-                        <li>Utilisation des shaders pour améliorer la luminosité et la texture.</li>
-                        <li>Utilisation de la fréquence de la musique pour interagir avec l'environnement.</li>
-                        <li>Implémentation d'un système de script d'événements pour changer l'angle de caméra.</li>
-                    </ul>
-                    <div class="video-container">
-                        <video controls width="600">
-                            <source src="chemin-vers-video/demo2023.mp4" type="video/mp4">
-                            Votre navigateur ne prend pas en charge la vidéo.
-                        </video>
-                    </div>
-                    <p>Lien du projet sur <a href="https://github.com/BastosLaG/GL4Ddemo-API8-2023-">github</a>
-                </div>
-            </li>
-            <li>
-                <strong>Démo GL4D pour l'édition 2024 d'API8</strong>
-                <div class="content">
-                    <p>La démonstration met en scène une nuée d'étourneau sous différent format la premiere est un systeme masse ressort une contrainte de Mr Jean-Jacques Bourdin mon professeur de d'algorithme (expert dans l'image) et la seconde est un systeme de Boids "plus réaliste". Nous avons ajouté à cette démo un rapace (prédateur naturel des étourneaux, représenté en rouge) afin d'observer les réactions naturelles de ces fascinantes créatures. Nous avons aussi fais un  rapport détaillé sous la directive de Jean-Jacques Bourdin notre tuteur sur ce projet. Ce que j'ai appris :</p>
-                    <ul>
-                        <li>Utilisation d'alghorithme complexe de déplacement sur une masse importante de model 3D en simultané </li>
-                        <li>Utilisation de shader adaptatif aux besoin et modifiable a un instant précis sans recompilation du code. (La couleur des étourneaux)</li>
-                        <li>Utilisation d'une shadow map et d'une lumière directionnel</li>
-                    </ul>
-                    <div class="video-container">
-                        <video controls width="600">
-                            <source src="chemin-vers-video/demo2023.mp4" type="video/mp4">
-                            Votre navigateur ne prend pas en charge la vidéo.
-                        </video>
-                    </div>
-                    <p>Lien du projet + recherche sur <a href="https://github.com/BastosLaG/nueeEtourneaux">github</a>
-                    </p>
-                </div>
-            </li>
-        </ul>
-        <p><b>Tout a été codée grâce à la documentation GL4D, en C, en .vs (vertex shader) et en .fs (fragment shader).</b></p>
-        
-        <!-- Catégorie : Algorithmes -->
-        <h2>Algorithmes</h2>
-        <p>Cette partie est consacrée à mes recherches sur différents algorithmes.</p>
-        <ul>
-            <li>
-                <strong>Les Nombres de Catalan</strong> 
-                <div class="content">
-                    <section>
-                        <h3>Définition</h3>
-                        <p>Les <b>nombres de Catalan</b> sont une suite de nombres entiers qui apparaissent fréquemment en combinatoire. Ils sont définis par la formule :</p>
-                        <p><code>C<sub>n</sub> = (1 / (n+1)) * (2n choose n) = (2n)! / ((n+1)! * n!)</code>, pour <code>n ≥ 0</code>.</p>
-                        <h3>Premiers Termes</h3>
-                        <ul>
-                            <li><code>C<sub>0</sub> = 1</code></li>
-                            <li><code>C<sub>1</sub> = 1</code></li>
-                            <li><code>C<sub>2</sub> = 2</code></li>
-                            <li><code>C<sub>3</sub> = 5</code></li>
-                            <li><code>C<sub>4</sub> = 14</code></li>
-                            <li><code>C<sub>5</sub> = 42</code></li>
-                        </ul>
-                        <h3>Applications</h3>
-                        <p>Les nombres de Catalan interviennent dans plusieurs problèmes combinatoires :</p>
-                        <ul>
-                            <li>Le nombre de façons d’associer correctement des parenthèses dans une expression.</li>
-                            <li>Le nombre de chemins sur un quadrillage qui ne passent pas au-dessus de la diagonale principale.</li>
-                            <li>Le nombre d’arbres binaires possibles avec <code>n</code> nœuds internes.</li>
-                            <li>Le nombre de triangulations d’un polygone convexe avec <code>n+2</code> sommets.</li>
-                        </ul>
-                        <h3>Étude et Résultats</h3>
-                        <p>Les nombres de Catalan peuvent être calculés de nombreuses façons. L'objectif qui m'a été donné était de tester, en langage C, toutes les possibilités pour calculer ces nombres de la manière la plus optimale.</p>
-                        <p>Lien du projet avec le rapport sur <a href="https://github.com/BastosLaG/Algorithmique2023/tree/main/projet/rapport">GitHub</a></p>
-                        <img src="Assets/Projets/Algo/Catalan/test100mille.png" alt="Catalan" class="image" onclick="openFullscreen(this)">
-                        <p><b>En conclusion</b> : Ma version générative était la plus rapide pour calculer les nombres de Catalan.</p>
-                </div>
-            </li>
-        </ul>
-    
-        <!-- Catégorie : Applications
-        <h3>Applications</h3>
-        <ul>
-            <li><strong>Application 1 :</strong> <a href="#">Nom de l'application</a> <br>- Une brève description.</li>
-            <li><strong>Application 2 :</strong> <a href="#">Nom de l'application</a> <br>- Une brève description.</li>
-            <li><strong>Application 3 :</strong> <a href="#">Nom de l'application</a> <br>- Une brève description.</li>
-        </ul> -->
-    </section>
-    
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Vous pouvez me contacter à l'adresse suivante : <a href="mailto:bastien.capiaux@gmail.com">bastien.capiaux@gmail.com</a></p>
-        <h2>Réseaux</h2>
-        <div class="social-media">
-            <a href="https://x.com/BastosLaG" target="_blank" class="social-icon twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/piquantus_/" target="_blank" class="social-icon instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/bastien-capiaux/" target="_blank" class="social-icon linkedin">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/BastosLaG" target="_blank" class="social-icon github">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-    </section>
-    <!-- Div qui contiendra l'image en plein écran -->
-    <div id="fullscreen-container" class="fullscreen">
-        <img id="fullscreen-image" src="" alt="Image en plein écran">
-        <span class="close" onclick="closeFullscreen()">&#10006;</span>
-    </div>
-    <footer>
-        <p>© 2024 Bastien Capiaux. Tous droits réservés.</p>
-    </footer>
-    <script src="script.js"></script>
+        </section>
+
+        <section class="education">
+            <h2>Formation</h2>
+            <ul>
+                <li>Bachelor en Informatique - Université XYZ (2020-2023)</li>
+                <li>Certificat en Développement de Jeux Vidéo - Institut ABC (2019)</li>
+            </ul>
+        </section>
+
+        <section class="experience">
+            <h2>Expérience Professionnelle</h2>
+            <ul>
+                <li>Stagiaire Développeur chez TechCorp (Été 2022) - Participation au développement d'une application web.</li>
+                <li>Projet Freelance - Création d'un jeu simple en utilisant Godot pour un client local (2021).</li>
+            </ul>
+        </section>
+    </main>
+
 </body>
+
+<div id="footer-placeholder"></div>
+<script>
+fetch("Pages/footer.html")
+    .then(response => response.text())
+    .then(data => {
+    document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
 </html>
